@@ -1,7 +1,7 @@
 
 import { gql } from '@apollo/client';
 
-export const GET_CHARACTERS = gql`
+export const GET_CHARACTER= gql`
   query GetCharacters {
     characters(page: 1) {
       results {

@@ -1,10 +1,7 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+// src/graphql/apolloClient.js
+import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
-const client = new ApolloClient({
-  uri: import.meta.env.VITE_GRAPHQL_URI, 
+export const client = new ApolloClient({
+  link: new HttpLink({ uri: 'https://rickandmortyapi.com/graphql' }),
   cache: new InMemoryCache(),
 });
-console.log(import.meta.env.VITE_GRAPHQL_URI);
-
-
-export default client;
