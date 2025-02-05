@@ -12,8 +12,15 @@ const CommentSection = ({ character, goBack }) => {
   };
 
   return (
-    <div className="bg-gray-800 p-4 rounded-lg">
-      <button onClick={goBack} className="text-white mb-4">← Volver</button>
+    <div className="bg-gray-800 p-4 rounded-lg relative">
+     
+      <button 
+        onClick={goBack} 
+        className="text-white absolute top-2 right-2 p-1 rounded-full hover:bg-gray-700"
+      >
+        ✖
+      </button>
+      
       <h2 className="text-xl text-white">{character.name}</h2>
       <div className="mt-4">
         <textarea

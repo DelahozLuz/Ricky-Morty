@@ -10,7 +10,6 @@ import { ApolloProvider } from '@apollo/client';
 import { client } from './graphql/apolloClient'; 
 
 import Favorites from './components/FavoritesList';
-import CharacterList from './components/CharacterList';
 import CharacterDetail from './components/CharacterDetail';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
